@@ -36,10 +36,10 @@ public class DrawGraph : MonoBehaviour
 
     private void Update()
     {
-        if((normalizeTimeCount / sampleCount) <= _motionAnalysis.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime)
-        {
-            normalizeTimeCount++;
-        }
+        //if((normalizeTimeCount / sampleCount) <= _motionAnalysis.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime)
+        //{
+        //    normalizeTimeCount++;
+        //}
         DrawLine(_toeLineRenderer, toe, toePos, ref toeTemp);
         DrawLine(_heelLineRenderer, heel, heelPos, ref heelTemp);
     }
@@ -54,7 +54,6 @@ public class DrawGraph : MonoBehaviour
                 _lineRenderer.SetPosition(i, pos[i] = pos[i + 1] + new Vector3(offSet * 8, 0f));
                 pos[_lineRenderer.positionCount - 1] = pos[pos.Count - 1];
 
-                normalizeTimeCount = 0;
                 temp = normalizeTimeCount;
             }
         }

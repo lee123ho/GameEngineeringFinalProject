@@ -16,7 +16,7 @@ public class Constraints
     [Range(0f, 90f)]
     public float SwingYawLimitAngle;
 
-    [ReadOnly] public List<GameObject> BoneChain = new List<GameObject>();
+    [Space][ReadOnly] public List<GameObject> BoneChain = new List<GameObject>();
 
     public void setBoneChain(GameObject obj)
     {
